@@ -30,3 +30,13 @@ We will here implement register file as shown -
 
 - Reg write is also needed, whose high state will convey the meaning that their is a need to write in regsiter. We will be implementing it will control signal **RW**. 
 
+
+#### Shifter
+
+A shifter will shift the input 32-bit data value by a given amount and depending on the input type as Left shift, right shift unsigned, signed right shift and rotation characterised in ARM as LSL, RSL, ASL and ROR respectively.
+
+![Shifter](img/shift.png)
+
+We will be making 5 different shifting entities which will be shifting the bits through a different amount, which will be 1 bits, 2 bits, 4 bits, 8 bits and 16 bits. For e.g. if we have to shift the 32-bit data input by 25 amount, our shifter architecture will shift it as 1+8+16, where 2 bits and 4 bits will not shift the input.
+
+![shift-entities](img/shifting.png)
