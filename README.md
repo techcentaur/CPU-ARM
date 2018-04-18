@@ -33,10 +33,23 @@ We will here implement register file as shown -
 
 #### Shifter
 
-A shifter will shift the input 32-bit data value by a given amount and depending on the input type as Left shift, right shift unsigned, signed right shift and rotation characterised in ARM as LSL, RSL, ASL and ROR respectively.
+A shifter will shift the input 32-bit data value by a given amount and depending on the input type as Left shift, right shift unsigned, signed right shift and rotation characterised in ARM as **LSL**, **RSL**, **ASL** and **ROR** respectively.
 
 ![Shifter](img/shift.png)
 
 We will be making 5 different shifting entities which will be shifting the bits through a different amount, which will be 1 bits, 2 bits, 4 bits, 8 bits and 16 bits. For e.g. if we have to shift the 32-bit data input by 25 amount, our shifter architecture will shift it as 1+8+16, where 2 bits and 4 bits will not shift the input.
 
 ![shift-entities](img/shifting.png)
+
+
+#### ALU(Arithmetical and logical unit)
+
+An arithmetic logic unit (ALU) is a combinational digital electronic circuit that performs arithmetic and bitwise operations on integer binary numbers. 
+
+Our implementation of ALU will be as follows -
+
+![ALU](img/alu.png)
+
+- **a** and **b** are 32-bit input `STD_LOGIC_VECTOR`, the data on which we will operate.
+- **carry** as `STD_LOGIC` and **opcode** as 4-bit `STD_LOGIC_VECTOR` are rest inputs.
+- **result** is the answer of the operation and **Flags** will be the 4-flags; Zero-flag, Negative-flag, Carry-flag and Overflow flag.
