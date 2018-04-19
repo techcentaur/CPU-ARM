@@ -53,3 +53,15 @@ Our implementation of ALU will be as follows -
 - **a** and **b** are 32-bit input `STD_LOGIC_VECTOR`, the data on which we will operate.
 - **carry** as `STD_LOGIC` and **opcode** as 4-bit `STD_LOGIC_VECTOR` are rest inputs.
 - **result** is the answer of the operation and **Flags** will be the 4-flags; Zero-flag, Negative-flag, Carry-flag and Overflow flag.
+
+#### Multiplier
+
+Multiplier takes 2 32-bit data values and perform the multiplication operation on it and then output the last 32 bits of resulting vector(the resulting vector could be upto 64-bits).
+
+![Multiplier](img/multi.png)
+
+#### Temporary Memory
+
+It can store upto 1024 `STD_LOGIC_VECTOR` of 32-bit data values.
+
+### Datapath
